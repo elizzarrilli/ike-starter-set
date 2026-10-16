@@ -37,7 +37,9 @@ final class PopulationReferenceRangePatternV2 {
     static void compose(KnowledgeSet set) {
         ActiveStamp inception = network.ike.foundation.ike.terms.Ike.DEX_INCEPTION;
 
-        set.pattern("Population Reference Range Pattern", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2"))).at(inception)
+        // The builder keys patterns by name, and v1 already has a pattern of this name under another identity,
+        // so the key carries a suffix; the FQN description below keeps the data's text.
+        set.pattern("Population Reference Range Pattern (DeX v2)", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2"))).at(inception)
                 .meaning(DexTerm.REFERENCE_RANGE).purpose(DexTerm.DEVICE_EXTENSION_RECORD)
                 .field(DexTerm.REFERENCE_RANGE_POPULATION, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.STRING)
                 .field(DexTerm.REFERENCE_RANGE_MINIMUM, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.FLOAT_FIELD)

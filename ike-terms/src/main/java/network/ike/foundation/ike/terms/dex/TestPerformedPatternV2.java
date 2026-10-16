@@ -37,7 +37,9 @@ final class TestPerformedPatternV2 {
     static void compose(KnowledgeSet set) {
         ActiveStamp inception = network.ike.foundation.ike.terms.Ike.DEX_INCEPTION;
 
-        set.pattern("Test Performed Pattern", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751"))).at(inception)
+        // The builder keys patterns by name, and v1 already has a pattern of this name under another identity,
+        // so the key carries a suffix; the FQN description below keeps the data's text.
+        set.pattern("Test Performed Pattern (DeX v2)", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751"))).at(inception)
                 .meaning(DexTerm.TEST_PERFORMED).purpose(DexTerm.DEVICE_EXTENSION_RECORD)
                 .field(DexTerm.ANALYTE, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
                 .field(DexTerm.TARGET, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
