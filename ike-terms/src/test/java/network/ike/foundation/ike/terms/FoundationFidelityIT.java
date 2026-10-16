@@ -251,6 +251,15 @@ class FoundationFidelityIT {
     private static final long ADOPTED_ESTABLISHED_CONCEPTS = 1;
     /** Patterns a catalog import mints: the ELM type position pattern. */
     private static final long IMPORTED_CATALOG_PATTERNS = 1;
+    /**
+     * Concepts the Device Extension (DeX) starter data adds, ingested identity-exact by
+     * {@code DexSet}: the DeX module, author, model concept, phenomenon and record families, and
+     * the 16 concepts filed under them (the six Interval/Temporal concepts the DeX data also
+     * carries are already in the foundation).
+     */
+    private static final long DEX_CONCEPTS = 21;
+    /** Patterns the DeX starter data adds: the DeX membership pattern and its eight record patterns. */
+    private static final long DEX_PATTERNS = 9;
 
     /**
      * Components whose stated-axiom semantic's own historical versions resolve to more
@@ -920,9 +929,10 @@ class FoundationFidelityIT {
         introduced.removeAll(BASELINE_STAMP_NIDS);
         assertEquals(Set.of(PrimitiveData.nid(Ike.INCEPTION.publicId()),
                         PrimitiveData.nid(Ike.DEFAULTS_INCEPTION.publicId()),
-                        PrimitiveData.nid(Ike.ASCIIDOC_INCEPTION.publicId())),
+                        PrimitiveData.nid(Ike.ASCIIDOC_INCEPTION.publicId()),
+                        PrimitiveData.nid(Ike.DEX_INCEPTION.publicId())),
                 introduced,
-                "replay must write versions under exactly the three inception stamps — any other"
+                "replay must write versions under exactly the four inception stamps — any other"
                         + " stamp means a working-day or revision layer survived the flatten"
                         + " (IKE-Network/ike-issues#894)");
     }
@@ -935,7 +945,7 @@ class FoundationFidelityIT {
         long[] patternsAfter = {0};
         EntityService.get().forEachPatternEntity(pattern -> patternsAfter[0]++);
         assertEquals(conceptsBefore + INGEST_BOOTSTRAP_CONCEPTS + AUTHORED_CONTENT_CONCEPTS
-                        + IMPORTED_CATALOG_CONCEPTS + ADOPTED_ESTABLISHED_CONCEPTS, conceptsAfter[0],
+                        + IMPORTED_CATALOG_CONCEPTS + ADOPTED_ESTABLISHED_CONCEPTS + DEX_CONCEPTS, conceptsAfter[0],
                 "expected exactly " + INGEST_BOOTSTRAP_CONCEPTS + " identity-exact-ingest concepts (module,"
                         + " root, IKE Community) plus " + AUTHORED_CONTENT_CONCEPTS + " deliberately-authored"
                         + " new concepts (see AUTHORED_CONTENT_CONCEPTS,"
@@ -943,7 +953,8 @@ class FoundationFidelityIT {
                         + " imported catalog concepts (see IMPORTED_CATALOG_CONCEPTS, #1104) plus "
                         + ADOPTED_ESTABLISHED_CONCEPTS + " adopted under established identities (see"
                         + " ADOPTED_ESTABLISHED_CONCEPTS) — no other minting");
-        assertEquals(patternsBefore + AUTHORED_CONTENT_PATTERNS + IMPORTED_CATALOG_PATTERNS, patternsAfter[0],
+        assertEquals(patternsBefore + AUTHORED_CONTENT_PATTERNS + IMPORTED_CATALOG_PATTERNS + DEX_PATTERNS,
+                patternsAfter[0],
                 "identity-exact ingest mints no new patterns; the authoring passes deliberately mint "
                         + AUTHORED_CONTENT_PATTERNS + " (Taxonomy Field Constraint Pattern, Value-set Field"
                         + " Constraint Pattern, Starter Set Author Roster Pattern, Preferred Reviewer"

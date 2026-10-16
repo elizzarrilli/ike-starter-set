@@ -23,6 +23,7 @@ import dev.ikm.tinkar.entity.builder.Stamp;
 import dev.ikm.tinkar.terms.ConceptFacade;
 import dev.ikm.tinkar.terms.DefaultsTemplateTerm;
 import dev.ikm.tinkar.terms.KernelConcept;
+import network.ike.foundation.ike.terms.dex.DexTerm;
 
 /**
  * Ledger-internal handles for the IkeFoundation knowledge set: the session root and the
@@ -119,4 +120,14 @@ public final class Ike {
      */
     public static final ActiveStamp ASCIIDOC_INCEPTION = Stamp.active(PrimitiveData.INCEPTION_EPOCH,
             IKE_COMMUNITY, ASCIIDOC_MODULE, KernelConcept.DEVELOPMENT_PATH);
+
+    /**
+     * The Device Extension (DeX) starter data's inception stamp, at the same declared time: the
+     * DeX components are authored by the Device Extension Author in the Device Extension
+     * Module, so the module dimension alone separates them from the foundation terminology and
+     * a store can carry or omit them as a unit. Both dimensions are DeX concepts declared
+     * outright in {@code DexSet}.
+     */
+    public static final ActiveStamp DEX_INCEPTION = Stamp.active(PrimitiveData.INCEPTION_EPOCH,
+            DexTerm.DEVICE_EXTENSION_AUTHOR, DexTerm.DEVICE_EXTENSION_MODULE, KernelConcept.DEVELOPMENT_PATH);
 }

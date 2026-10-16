@@ -18,6 +18,7 @@ package network.ike.foundation.ike.terms;
 import dev.ikm.tinkar.entity.builder.KnowledgeSet;
 import dev.ikm.tinkar.entity.builder.KnowledgeSetSource;
 import dev.ikm.tinkar.entity.builder.Stamp;
+import network.ike.foundation.ike.terms.dex.DexSet;
 import network.ike.foundation.ike.terms.foundation.FoundationSet;
 
 /**
@@ -59,6 +60,7 @@ public final class IkeSource implements KnowledgeSetSource {
         Ike.SET.bindStamp(Ike.INCEPTION, Ike.STAMPS, "INCEPTION");
         Ike.SET.bindStamp(Ike.DEFAULTS_INCEPTION, Ike.STAMPS, "DEFAULTS_INCEPTION");
         Ike.SET.bindStamp(Ike.ASCIIDOC_INCEPTION, Ike.STAMPS, "ASCIIDOC_INCEPTION");
+        Ike.SET.bindStamp(Ike.DEX_INCEPTION, Ike.STAMPS, "DEX_INCEPTION");
         Ike.SET.bindStamp(Stamp.nonExistent(), Ike.STAMPS, "NON_EXISTENT");
         ConceptSet.compose(Ike.SET);
         // ProseElementSet declares the shared prose-element apparatus at its foundation
@@ -149,6 +151,11 @@ public final class IkeSource implements KnowledgeSetSource {
         // DefinitionCompletionSet authors the 25 first definitions of the base-model
         // chronicle/version field concepts (IKE-Network/ike-issues#892).
         DefinitionCompletionSet.compose(Ike.SET);
+        // DexSet ingests the Device Extension (DeX) starter data identity-exact (2025-09-03): the DeX
+        // module, author, model concept, phenomenon and record families, the concepts filed under them,
+        // and the nine patterns that record device extension data, all under Ike.DEX_INCEPTION. Its
+        // parents (Model concept, Phenomenon, Module, User) are foundation components composed above.
+        DexSet.compose(Ike.SET);
         // TODO: the rest of the IKE carriers section (new (IKE)-tagged content) lands
         // separately when the wave-2 coordination concludes (IKE-Network/ike-issues#867).
         // The kernel and Komet's terms bind components declared throughout the sections above,
