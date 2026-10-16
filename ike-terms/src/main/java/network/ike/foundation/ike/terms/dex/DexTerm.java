@@ -190,4 +190,186 @@ public final class DexTerm {
     /** {@code Reference Range Minimum (SOLOR)} — an established component the DeX content cites. */
     public static final EntityProxy.Concept REFERENCE_RANGE_MINIMUM =
             EntityProxy.Concept.make("Reference Range Minimum (SOLOR)", PublicIds.of(UUID.fromString("37c35a88-9e27-42ca-b626-186773c4b612")));
+
+    // ── DeX v2 ─────────────────────────────────────────────────────────────────────────────────────
+
+    /** {@code Class I} — a DeX v2 concept. */
+    public static final EntityProxy.Concept CLASS_I =
+            EntityProxy.Concept.make("Class I", PublicIds.of(UUID.fromString("3fc148fd-c1a1-4b41-b378-c3c2aa24909d")));
+
+    /** {@code Class II} — a DeX v2 concept. */
+    public static final EntityProxy.Concept CLASS_II =
+            EntityProxy.Concept.make("Class II", PublicIds.of(UUID.fromString("c6565a03-1223-4f41-902a-837f307c1865")));
+
+    /** {@code Class III} — a DeX v2 concept. */
+    public static final EntityProxy.Concept CLASS_III =
+            EntityProxy.Concept.make("Class III", PublicIds.of(UUID.fromString("b2edf870-95da-48a8-8ce4-622931d00243")));
+
+    /** {@code Clinical Laboratory Improvement Amendments Complexity Level} — a DeX v2 concept. */
+    public static final EntityProxy.Concept CLINICAL_LABORATORY_IMPROVEMENT_AMENDMENTS_COMPLEXITY_LEVEL =
+            EntityProxy.Concept.make("Clinical Laboratory Improvement Amendments Complexity Level", PublicIds.of(UUID.fromString("223ff478-7227-4822-a78e-08fea77effd8")));
+
+    /** {@code Confidence Level} — a DeX v2 concept. */
+    public static final EntityProxy.Concept CONFIDENCE_LEVEL =
+            EntityProxy.Concept.make("Confidence Level", PublicIds.of(UUID.fromString("981b96d6-3447-4fd6-8e9d-ec6fa51bb4f2")));
+
+    /** {@code Device Class} — a DeX v2 concept. */
+    public static final EntityProxy.Concept DEVICE_CLASS =
+            EntityProxy.Concept.make("Device Class", PublicIds.of(UUID.fromString("083c4e17-1e71-40fe-a84e-a4e91eb7e24e")));
+
+    /** {@code Device Performance} — a DeX v2 concept. */
+    public static final EntityProxy.Concept DEVICE_PERFORMANCE =
+            EntityProxy.Concept.make("Device Performance", PublicIds.of(UUID.fromString("fdbda4ad-9af9-42fd-aedd-2e57f6c00f61")));
+
+    /** {@code Device Performance Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern DEVICE_PERFORMANCE_PATTERN =
+            EntityProxy.Pattern.make("Device Performance Pattern", PublicIds.of(UUID.fromString("b8962f4a-6ad0-4f08-a5c6-1f3b302cacd9")));
+
+    /** {@code High Complexity} — a DeX v2 concept. */
+    public static final EntityProxy.Concept HIGH_COMPLEXITY =
+            EntityProxy.Concept.make("High Complexity", PublicIds.of(UUID.fromString("6e7e8657-28e4-4b2d-a66a-b29cbdb85668")));
+
+    /** {@code Interpretation} — a DeX v2 concept. */
+    public static final EntityProxy.Concept INTERPRETATION =
+            EntityProxy.Concept.make("Interpretation", PublicIds.of(UUID.fromString("cff8c7c7-6115-485f-9925-a87bf0199d2d")));
+
+    /** {@code Limit Metric Type} — a DeX v2 concept. */
+    public static final EntityProxy.Concept LIMIT_METRIC_TYPE =
+            EntityProxy.Concept.make("Limit Metric Type", PublicIds.of(UUID.fromString("81563eee-3128-450d-85dc-853e77b924eb")));
+
+    /** {@code Limit Metrics} — a DeX v2 concept. */
+    public static final EntityProxy.Concept LIMIT_METRICS =
+            EntityProxy.Concept.make("Limit Metrics", PublicIds.of(UUID.fromString("c28f4201-0867-446a-baeb-95a15fb5d343")));
+
+    /** {@code Limit Metrics Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern LIMIT_METRICS_PATTERN =
+            EntityProxy.Pattern.make("Limit Metrics Pattern", PublicIds.of(UUID.fromString("34fbab84-87e9-4d22-89dc-fb1b5a2524c3")));
+
+    /** {@code Limit Value} — a DeX v2 concept. */
+    public static final EntityProxy.Concept LIMIT_VALUE =
+            EntityProxy.Concept.make("Limit Value", PublicIds.of(UUID.fromString("2f68311c-6398-464f-83c0-e9c5f6523967")));
+
+    /** {@code Limit of Blank} — a DeX v2 concept. */
+    public static final EntityProxy.Concept LIMIT_OF_BLANK =
+            EntityProxy.Concept.make("Limit of Blank", PublicIds.of(UUID.fromString("43cb7e60-5f9b-4b46-beee-3f38fc45f762")));
+
+    /** {@code Limit of Detection} — a DeX v2 concept. */
+    public static final EntityProxy.Concept LIMIT_OF_DETECTION =
+            EntityProxy.Concept.make("Limit of Detection", PublicIds.of(UUID.fromString("651b040d-0155-4089-9589-e31a831f82c7")));
+
+    /** {@code Limit of Quantitation} — a DeX v2 concept. */
+    public static final EntityProxy.Concept LIMIT_OF_QUANTITATION =
+            EntityProxy.Concept.make("Limit of Quantitation", PublicIds.of(UUID.fromString("d0ef707f-79a4-4eaa-a449-5277a46e99be")));
+
+    /** {@code Lower Reference Limit} — a DeX v2 concept. */
+    public static final EntityProxy.Concept LOWER_REFERENCE_LIMIT =
+            EntityProxy.Concept.make("Lower Reference Limit", PublicIds.of(UUID.fromString("f946d936-c885-45f1-821c-bc69b9e73d5a")));
+
+    /** {@code Measuring Range} — a DeX v2 concept. */
+    public static final EntityProxy.Concept MEASURING_RANGE =
+            EntityProxy.Concept.make("Measuring Range", PublicIds.of(UUID.fromString("e1c0ff10-d1fa-4c5e-b726-132e304a869b")));
+
+    /** {@code Measuring Range Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern MEASURING_RANGE_PATTERN =
+            EntityProxy.Pattern.make("Measuring Range Pattern", PublicIds.of(UUID.fromString("17e163b0-1cbc-4e35-b1a7-785bf7ffd81f")));
+
+    /** {@code Moderate Complexity Level} — a DeX v2 concept. */
+    public static final EntityProxy.Concept MODERATE_COMPLEXITY_LEVEL =
+            EntityProxy.Concept.make("Moderate Complexity Level", PublicIds.of(UUID.fromString("1f0c761c-ce62-49d2-92d3-36c7ba4d80d2")));
+
+    /** {@code Over the Counter (OTC)} — a DeX v2 concept. */
+    public static final EntityProxy.Concept OVER_THE_COUNTER_OTC =
+            EntityProxy.Concept.make("Over the Counter (OTC)", PublicIds.of(UUID.fromString("7de25bc3-ef80-4c48-b5bb-4c4b4b874652")));
+
+    /** {@code Percentile Value} — a DeX v2 concept. */
+    public static final EntityProxy.Concept PERCENTILE_VALUE =
+            EntityProxy.Concept.make("Percentile Value", PublicIds.of(UUID.fromString("184c70c7-75f1-4c50-8cbb-24f4fac878f2")));
+
+    /** {@code Performance Metric} — a DeX v2 concept. */
+    public static final EntityProxy.Concept PERFORMANCE_METRIC =
+            EntityProxy.Concept.make("Performance Metric", PublicIds.of(UUID.fromString("5ec20eb4-344c-49e8-aa7a-ea09485c5709")));
+
+    /** {@code Performance Metric Value} — a DeX v2 concept. */
+    public static final EntityProxy.Concept PERFORMANCE_METRIC_VALUE =
+            EntityProxy.Concept.make("Performance Metric Value", PublicIds.of(UUID.fromString("88bb710a-672a-4f02-ba7a-bbfb98e0a209")));
+
+    /** {@code Population Reference Range Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern POPULATION_REFERENCE_RANGE_PATTERN_V2 =
+            EntityProxy.Pattern.make("Population Reference Range Pattern", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2")));
+
+    /** {@code Predicate Device} — a DeX v2 concept. */
+    public static final EntityProxy.Concept PREDICATE_DEVICE =
+            EntityProxy.Concept.make("Predicate Device", PublicIds.of(UUID.fromString("d43e4002-1dda-4205-b72c-986f181dd995")));
+
+    /** {@code Predicate Device Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern PREDICATE_DEVICE_PATTERN =
+            EntityProxy.Pattern.make("Predicate Device Pattern", PublicIds.of(UUID.fromString("ee60349d-1ffd-42de-a760-35f45452bff0")));
+
+    /** {@code Prescription Required} — a DeX v2 concept. */
+    public static final EntityProxy.Concept PRESCRIPTION_REQUIRED =
+            EntityProxy.Concept.make("Prescription Required", PublicIds.of(UUID.fromString("b424f8ba-81b2-49a4-8907-ddc376d44f29")));
+
+    /** {@code Prescription Status} — a DeX v2 concept. */
+    public static final EntityProxy.Concept PRESCRIPTION_STATUS =
+            EntityProxy.Concept.make("Prescription Status", PublicIds.of(UUID.fromString("187b44a5-5f35-4e5b-89d2-42fe69960ee9")));
+
+    /** {@code Reference Limit} — a DeX v2 concept. */
+    public static final EntityProxy.Concept REFERENCE_LIMIT =
+            EntityProxy.Concept.make("Reference Limit", PublicIds.of(UUID.fromString("192c9004-095f-4673-8142-01b354f250e1")));
+
+    /** {@code Reference Limit Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern REFERENCE_LIMIT_PATTERN =
+            EntityProxy.Pattern.make("Reference Limit Pattern", PublicIds.of(UUID.fromString("dd7ad60d-05fb-485d-8114-424bbf17e149")));
+
+    /** {@code Reference Limit Population} — a DeX v2 concept. */
+    public static final EntityProxy.Concept REFERENCE_LIMIT_POPULATION =
+            EntityProxy.Concept.make("Reference Limit Population", PublicIds.of(UUID.fromString("f2042a9c-f9bb-4a0c-b7a1-032f0fb763be")));
+
+    /** {@code Reference Limit Type} — a DeX v2 concept. */
+    public static final EntityProxy.Concept REFERENCE_LIMIT_TYPE =
+            EntityProxy.Concept.make("Reference Limit Type", PublicIds.of(UUID.fromString("b56d276c-b910-47a8-8090-d3f314b17c85")));
+
+    /** {@code Reference Limit Value} — a DeX v2 concept. */
+    public static final EntityProxy.Concept REFERENCE_LIMIT_VALUE =
+            EntityProxy.Concept.make("Reference Limit Value", PublicIds.of(UUID.fromString("5d5291e5-9ec8-4bf5-b1c4-3bef6dc8a2f3")));
+
+    /** {@code Reference Limit Value Operator} — a DeX v2 concept. */
+    public static final EntityProxy.Concept REFERENCE_LIMIT_VALUE_OPERATOR =
+            EntityProxy.Concept.make("Reference Limit Value Operator", PublicIds.of(UUID.fromString("d19b5ce0-f5df-4e23-a569-2854e6dab99f")));
+
+    /** {@code Regulatory Classification} — a DeX v2 concept. */
+    public static final EntityProxy.Concept REGULATORY_CLASSIFICATION =
+            EntityProxy.Concept.make("Regulatory Classification", PublicIds.of(UUID.fromString("b56e3cf2-3ad0-44d1-9404-d01454122bb6")));
+
+    /** {@code Regulatory Classification Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern REGULATORY_CLASSIFICATION_PATTERN =
+            EntityProxy.Pattern.make("Regulatory Classification Pattern", PublicIds.of(UUID.fromString("9809c747-3aca-4e40-9a46-3a9bca0f6225")));
+
+    /** {@code Sensitivity} — a DeX v2 concept. */
+    public static final EntityProxy.Concept SENSITIVITY =
+            EntityProxy.Concept.make("Sensitivity", PublicIds.of(UUID.fromString("b4567d03-228f-4508-aaf1-0401d245b6a1")));
+
+    /** {@code Sensitivity (metric)} — a DeX v2 concept. */
+    public static final EntityProxy.Concept SENSITIVITY_METRIC =
+            EntityProxy.Concept.make("Sensitivity (metric)", PublicIds.of(UUID.fromString("f25b1716-fa3b-464a-9c88-8dea8f3110c9")));
+
+    /** {@code Sensitivity Metric Value} — a DeX v2 concept. */
+    public static final EntityProxy.Concept SENSITIVITY_METRIC_VALUE =
+            EntityProxy.Concept.make("Sensitivity Metric Value", PublicIds.of(UUID.fromString("e850e28d-d0e5-446e-b3ff-3472ef003c3c")));
+
+    /** {@code Specificity} — a DeX v2 concept. */
+    public static final EntityProxy.Concept SPECIFICITY =
+            EntityProxy.Concept.make("Specificity", PublicIds.of(UUID.fromString("8990ee0d-14db-4b86-94fd-67f94478353b")));
+
+    /** {@code Test Performed Pattern} — a DeX v2 pattern. */
+    public static final EntityProxy.Pattern TEST_PERFORMED_PATTERN_V2 =
+            EntityProxy.Pattern.make("Test Performed Pattern", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751")));
+
+    /** {@code Upper Reference Limit} — a DeX v2 concept. */
+    public static final EntityProxy.Concept UPPER_REFERENCE_LIMIT =
+            EntityProxy.Concept.make("Upper Reference Limit", PublicIds.of(UUID.fromString("b18c4c85-74bf-4332-aece-249c407fccd3")));
+
+    /** {@code Waived Test} — a DeX v2 concept. */
+    public static final EntityProxy.Concept WAIVED_TEST =
+            EntityProxy.Concept.make("Waived Test", PublicIds.of(UUID.fromString("b10b443c-1848-4c4b-9016-60e9bbc7a1c4")));
 }
