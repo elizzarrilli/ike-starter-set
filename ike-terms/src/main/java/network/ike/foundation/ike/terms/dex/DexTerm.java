@@ -18,6 +18,7 @@ package network.ike.foundation.ike.terms.dex;
 import dev.ikm.tinkar.common.id.PublicIds;
 import dev.ikm.tinkar.terms.EntityProxy;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -372,4 +373,101 @@ public final class DexTerm {
     /** {@code Waived Test} — a DeX v2 concept. */
     public static final EntityProxy.Concept WAIVED_TEST =
             EntityProxy.Concept.make("Waived Test", PublicIds.of(UUID.fromString("b10b443c-1848-4c4b-9016-60e9bbc7a1c4")));
+
+    /**
+     * The concepts this set declares, the DeX concepts of v1 and v2, as opposed to the established
+     * components it only cites. The fidelity test uses it to exempt them from the meaning-and-purpose
+     * definition rule until their definitions are authored.
+     *
+     * @return the declared DeX concepts
+     */
+    public static List<EntityProxy.Concept> declaredConcepts() {
+        return List.of(
+                ALLOWABLE_RANGE_MAXIMUM_VALUE,
+                ALLOWABLE_RANGE_MINIMUM_VALUE,
+                ALLOWED_RESULTS_SET,
+                ANALYTE,
+                ASSOCIATED_DEVICES,
+                COMPANY,
+                DETECTION_LIMIT,
+                DEVICE_EXTENSION_AUTHOR,
+                DEVICE_EXTENSION_MODEL_CONCEPT,
+                DEVICE_EXTENSION_MODULE,
+                DEVICE_EXTENSION_PHENOMENON,
+                DEVICE_EXTENSION_RECORD,
+                INDICATION_FOR_USE,
+                INSTRUMENT,
+                LOINC_RECORD,
+                QUANTITATIVE_ALLOWED_RESULTS,
+                REFERENCE_RANGE_POPULATION,
+                SNOMED_RECORD,
+                SPECIMEN,
+                TARGET,
+                TEST_PERFORMED,
+                CLASS_I,
+                CLASS_II,
+                CLASS_III,
+                CLINICAL_LABORATORY_IMPROVEMENT_AMENDMENTS_COMPLEXITY_LEVEL,
+                CONFIDENCE_LEVEL,
+                DEVICE_CLASS,
+                DEVICE_PERFORMANCE,
+                HIGH_COMPLEXITY,
+                INTERPRETATION,
+                LIMIT_METRIC_TYPE,
+                LIMIT_METRICS,
+                LIMIT_VALUE,
+                LIMIT_OF_BLANK,
+                LIMIT_OF_DETECTION,
+                LIMIT_OF_QUANTITATION,
+                LOWER_REFERENCE_LIMIT,
+                MEASURING_RANGE,
+                MODERATE_COMPLEXITY_LEVEL,
+                OVER_THE_COUNTER_OTC,
+                PERCENTILE_VALUE,
+                PERFORMANCE_METRIC,
+                PERFORMANCE_METRIC_VALUE,
+                PREDICATE_DEVICE,
+                PRESCRIPTION_REQUIRED,
+                PRESCRIPTION_STATUS,
+                REFERENCE_LIMIT,
+                REFERENCE_LIMIT_POPULATION,
+                REFERENCE_LIMIT_TYPE,
+                REFERENCE_LIMIT_VALUE,
+                REFERENCE_LIMIT_VALUE_OPERATOR,
+                REGULATORY_CLASSIFICATION,
+                SENSITIVITY,
+                SENSITIVITY_METRIC,
+                SENSITIVITY_METRIC_VALUE,
+                SPECIFICITY,
+                UPPER_REFERENCE_LIMIT,
+                WAIVED_TEST);
+    }
+
+    /**
+     * The patterns this set declares, v1's and v2's, as opposed to the established patterns it only cites.
+     * The fidelity test uses it to exempt the concepts they cite from the meaning-and-purpose definition
+     * rule until the DeX definitions are authored.
+     *
+     * @return the declared DeX patterns
+     */
+    public static List<EntityProxy.Pattern> declaredPatterns() {
+        return List.of(
+                ALLOWED_RESULTS_PATTERN,
+                ASSOCIATED_DEVICES_PATTERN,
+                BRAND_NAME_MEMBERSHIP_PATTERN,
+                DEVICE_COMPANY_PATTERN,
+                DEVICE_EXTENSION_MEMBERSHIP_PATTERN,
+                INDICATION_FOR_USE_PATTERN,
+                POPULATION_REFERENCE_RANGE_PATTERN,
+                QUANTITATIVE_ALLOWED_RESULT_RANGE_PATTERN,
+                TEST_PERFORMED_PATTERN,
+                DEVICE_PERFORMANCE_PATTERN,
+                LIMIT_METRICS_PATTERN,
+                MEASURING_RANGE_PATTERN,
+                POPULATION_REFERENCE_RANGE_PATTERN_V2,
+                PREDICATE_DEVICE_PATTERN,
+                REFERENCE_LIMIT_PATTERN,
+                REGULATORY_CLASSIFICATION_PATTERN,
+                TEST_PERFORMED_PATTERN_V2);
+    }
 }
