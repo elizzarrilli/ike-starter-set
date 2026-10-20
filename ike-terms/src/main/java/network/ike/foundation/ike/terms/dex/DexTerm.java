@@ -296,7 +296,7 @@ public final class DexTerm {
 
     /** {@code Population Reference Range Pattern} — a DeX v2 pattern. */
     public static final EntityProxy.Pattern POPULATION_REFERENCE_RANGE_PATTERN_V2 =
-            EntityProxy.Pattern.make("Population Reference Range Pattern", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2")));
+            EntityProxy.Pattern.make("Population Reference Range Pattern DeX v2", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2")));
 
     /** {@code Predicate Device} — a DeX v2 concept. */
     public static final EntityProxy.Concept PREDICATE_DEVICE =
@@ -350,9 +350,9 @@ public final class DexTerm {
     public static final EntityProxy.Concept SENSITIVITY =
             EntityProxy.Concept.make("Sensitivity", PublicIds.of(UUID.fromString("b4567d03-228f-4508-aaf1-0401d245b6a1")));
 
-    /** {@code Sensitivity (metric)} — a DeX v2 concept. */
+    /** {@code Sensitivity metric} — a DeX v2 concept (named {@code Sensitivity (metric)} in the data). */
     public static final EntityProxy.Concept SENSITIVITY_METRIC =
-            EntityProxy.Concept.make("Sensitivity (metric)", PublicIds.of(UUID.fromString("f25b1716-fa3b-464a-9c88-8dea8f3110c9")));
+            EntityProxy.Concept.make("Sensitivity metric", PublicIds.of(UUID.fromString("f25b1716-fa3b-464a-9c88-8dea8f3110c9")));
 
     /** {@code Sensitivity Metric Value} — a DeX v2 concept. */
     public static final EntityProxy.Concept SENSITIVITY_METRIC_VALUE =
@@ -364,7 +364,7 @@ public final class DexTerm {
 
     /** {@code Test Performed Pattern} — a DeX v2 pattern. */
     public static final EntityProxy.Pattern TEST_PERFORMED_PATTERN_V2 =
-            EntityProxy.Pattern.make("Test Performed Pattern", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751")));
+            EntityProxy.Pattern.make("Test Performed Pattern DeX v2", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751")));
 
     /** {@code Upper Reference Limit} — a DeX v2 concept. */
     public static final EntityProxy.Concept UPPER_REFERENCE_LIMIT =

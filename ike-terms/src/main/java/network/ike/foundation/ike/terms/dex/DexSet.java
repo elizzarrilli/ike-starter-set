@@ -118,7 +118,7 @@ public final class DexSet {
         ReferenceLimitValueOperator.compose(set); // Reference Limit Value Operator
         RegulatoryClassification.compose(set); // Regulatory Classification
         Sensitivity.compose(set); // Sensitivity
-        SensitivityMetric.compose(set); // Sensitivity (metric)
+        SensitivityMetric.compose(set); // Sensitivity metric
         SensitivityMetricValue.compose(set); // Sensitivity Metric Value
         Specificity.compose(set); // Specificity
         UpperReferenceLimit.compose(set); // Upper Reference Limit

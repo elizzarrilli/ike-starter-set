@@ -37,9 +37,10 @@ final class PopulationReferenceRangePatternV2 {
     static void compose(KnowledgeSet set) {
         ActiveStamp inception = network.ike.foundation.ike.terms.Ike.DEX_INCEPTION;
 
-        // The builder keys patterns by name, and v1 already has a pattern of this name under another identity,
-        // so the key carries a suffix; the FQN description below keeps the data's text.
-        set.pattern("Population Reference Range Pattern (DeX v2)", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2"))).at(inception)
+        // The DeX data names this pattern "Population Reference Range Pattern", the same as a v1 pattern under another identity. The
+        // builder, the bindings and the koncept-YAML generators all key on the name (and drop a trailing
+        // parenthetical), so this pattern's name and FQN carry a plain "DeX v2" suffix; identities are unchanged.
+        set.pattern("Population Reference Range Pattern DeX v2", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2"))).at(inception)
                 .meaning(DexTerm.REFERENCE_RANGE).purpose(DexTerm.DEVICE_EXTENSION_RECORD)
                 .field(DexTerm.REFERENCE_RANGE_POPULATION, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.STRING)
                 .field(DexTerm.REFERENCE_RANGE_MINIMUM, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.FLOAT_FIELD)
@@ -48,7 +49,7 @@ final class PopulationReferenceRangePatternV2 {
                 .field(DexTerm.MAXIMUM_VALUE_OPERATOR, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_FIELD)
                 .field(DexTerm.EXAMPLE_UCUM_UNITS, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_FIELD)
                 .field(DexTerm.INTERPRETATION, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
-                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("2443936a-b737-444b-ab09-f9e9cf9fb642")), KernelConcept.ENGLISH_LANGUAGE, "Population Reference Range Pattern", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
+                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("2443936a-b737-444b-ab09-f9e9cf9fb642")), KernelConcept.ENGLISH_LANGUAGE, "Population Reference Range Pattern DeX v2", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
                 .semantic(DexTerm.DEVICE_EXTENSION_MEMBERSHIP_PATTERN, PublicIds.of(UUID.fromString("0512f924-7965-4295-a748-26e9c0982c5f")))
                 ;
     }

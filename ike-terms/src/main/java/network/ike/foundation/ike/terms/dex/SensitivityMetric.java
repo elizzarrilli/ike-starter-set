@@ -23,7 +23,7 @@ import dev.ikm.tinkar.terms.KernelPattern;
 
 import java.util.UUID;
 
-/** The "Sensitivity (metric)" concept of the Device Extension (DeX) starter set (v2). */
+/** The "Sensitivity metric" concept of the Device Extension (DeX) starter set (v2). */
 final class SensitivityMetric {
 
     private SensitivityMetric() {
@@ -37,8 +37,11 @@ final class SensitivityMetric {
     static void compose(KnowledgeSet set) {
         ActiveStamp inception = network.ike.foundation.ike.terms.Ike.DEX_INCEPTION;
 
-        set.concept("Sensitivity (metric)", PublicIds.of(UUID.fromString("f25b1716-fa3b-464a-9c88-8dea8f3110c9"))).at(inception)
-                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("da7779d9-34cb-44eb-b3cf-c0defcf3d4bb")), KernelConcept.ENGLISH_LANGUAGE, "Sensitivity (metric)", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
+        // The DeX data names this concept "Sensitivity (metric)", but the bindings and koncept-YAML generators
+        // drop a trailing qualifier, which made it collide with Sensitivity (both would be SENSITIVITY). The name
+        // is spelled without the parentheses here; every identity is unchanged.
+        set.concept("Sensitivity metric", PublicIds.of(UUID.fromString("f25b1716-fa3b-464a-9c88-8dea8f3110c9"))).at(inception)
+                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("da7779d9-34cb-44eb-b3cf-c0defcf3d4bb")), KernelConcept.ENGLISH_LANGUAGE, "Sensitivity metric", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
                 .statedAxioms(PublicIds.of(UUID.fromString("954b0dfc-86c5-4213-8d1b-b6b1a88d9ede")), leb -> leb.NecessarySet(leb.And(leb.ConceptAxiom(DexTerm.DEVICE_EXTENSION_MODEL_CONCEPT))))
                 .semantic(DexTerm.DEVICE_EXTENSION_MEMBERSHIP_PATTERN, PublicIds.of(UUID.fromString("fca5c200-3e61-4e77-93e0-2c1482872686")))
                 ;
