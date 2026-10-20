@@ -93,6 +93,34 @@ final class KernelBindings {
         bind(set, "b32dd26b-c3fc-487e-987e-16ace71a0d0f", "IDENTIFIER_VALUE");
         bind(set, "03004053-c23e-5206-8514-fb551dd328f4", "INACTIVE_STATE");
         bind(set, "def77c09-e1eb-40f2-931a-e7cf2ce0e597", "INCLUSION_SET");
+        // Declared after the kernel was cut, so these carry their derived identities.
+        set.bind(set.conceptRef(ClassificationModelSet.BOTTOM).publicId(), Ike.KERNEL, "BOTTOM");
+        set.bind(set.patternRef(ClassificationModelSet.INFERRED_EQUIVALENCE_PATTERN).publicId(), Ike.KERNEL,
+                "INFERRED_EQUIVALENCE_PATTERN");
+        // The record a transaction keeps (IKE-Network/ike-issues#1308): its pattern, the module it
+        // is written to, and its states. Declared after the kernel was cut, with derived identities.
+        set.bind(set.patternRef(ChangeTrackingModelSet.CHANGE_TRANSACTION_PATTERN).publicId(), Ike.KERNEL,
+                "CHANGE_TRANSACTION_PATTERN");
+        set.bind(set.conceptRef(ChangeTrackingModelSet.fqn("Change tracking module")).publicId(), Ike.KERNEL,
+                "CHANGE_TRACKING_MODULE");
+        set.bind(set.conceptRef(ChangeTrackingModelSet.fqn("Transaction open")).publicId(), Ike.KERNEL,
+                "TRANSACTION_OPEN");
+        set.bind(set.conceptRef(ChangeTrackingModelSet.fqn("Transaction committed")).publicId(), Ike.KERNEL,
+                "TRANSACTION_COMMITTED");
+        set.bind(set.conceptRef(ChangeTrackingModelSet.fqn("Transaction cancelled")).publicId(), Ike.KERNEL,
+                "TRANSACTION_CANCELLED");
+        // What a knowledge base is made of (IKE-Network/ike-issues#1304): the Registrar, the module and
+        // path registrations are written to, and the three registration patterns tinkar-core's registry
+        // writes. Declared after the kernel was cut, with derived identities.
+        set.bind(set.conceptRef(SourceReleaseModelSet.REGISTRAR).publicId(), Ike.KERNEL, "REGISTRAR");
+        set.bind(set.conceptRef(SourceReleaseModelSet.REGISTRY_MODULE).publicId(), Ike.KERNEL, "REGISTRY_MODULE");
+        set.bind(set.conceptRef(SourceReleaseModelSet.REGISTRY_PATH).publicId(), Ike.KERNEL, "REGISTRY_PATH");
+        set.bind(set.patternRef(SourceReleaseModelSet.RELEASE_REGISTRATION_PATTERN).publicId(), Ike.KERNEL,
+                "RELEASE_REGISTRATION_PATTERN");
+        set.bind(set.patternRef(SourceReleaseModelSet.ASSEMBLY_REGISTRATION_PATTERN).publicId(), Ike.KERNEL,
+                "ASSEMBLY_REGISTRATION_PATTERN");
+        set.bind(set.patternRef(SourceReleaseModelSet.EXPORT_REGISTRATION_PATTERN).publicId(), Ike.KERNEL,
+                "EXPORT_REGISTRATION_PATTERN");
         bind(set, "4bc6c333-7fc9-52f1-942d-f8decba19dc2", "INFERRED_NAVIGATION");
         bind(set, "a53cc42d-c07e-5934-96b3-2ede3264474e", "INFERRED_NAVIGATION_PATTERN");
         bind(set, "1290e6ba-48d0-31d2-8d62-e133373c63f5", "INFERRED_PREMISE_TYPE");
