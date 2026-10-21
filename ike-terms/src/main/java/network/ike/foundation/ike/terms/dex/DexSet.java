@@ -42,7 +42,7 @@ import dev.ikm.tinkar.entity.builder.KnowledgeSet;
  * Classification; the limit, reference-limit and performance-metric families; Interpretation, Measuring
  * Range, Device Performance and Predicate Device; and eight patterns. Where a v2 pattern shares a name
  * with a v1 pattern (Test Performed, Population Reference Range) both are kept, under their own
- * identities, and the v2 classes carry a {@code V2} suffix.
+ * identities: the v2 pattern keeps the data's name and the v1 pattern is marked archived.
  * <p>
  * Every identity is the one in the DeX starter data (v1 2025-09-03, v2 2026-10-13), declared outright.
  * Each component is authored at the one {@code Ike.DEX_INCEPTION} stamp (Device Extension Author, Device
@@ -88,9 +88,9 @@ public final class DexSet {
         DeviceCompanyPattern.compose(set); // Device Company Pattern
         DeviceExtensionMembershipPattern.compose(set); // Device Extension Membership Pattern
         IndicationForUsePattern.compose(set); // Indication for Use Pattern
-        PopulationReferenceRangePattern.compose(set); // Population Reference Range Pattern
+        PopulationReferenceRangePatternArchive.compose(set); // Population Reference Range Pattern Archive
         QuantitativeAllowedResultRangePattern.compose(set); // Quantitative Allowed Result Range Pattern
-        TestPerformedPattern.compose(set); // Test Performed Pattern
+        TestPerformedPatternArchive.compose(set); // Test Performed Pattern Archive
 
         // DeX v2: concepts parents-first, then patterns.
         ClinicalLaboratoryImprovementAmendmentsComplexityLevel.compose(set); // Clinical Laboratory Improvement Amendments Complexity Level
@@ -134,10 +134,10 @@ public final class DexSet {
         DevicePerformancePattern.compose(set); // Device Performance Pattern
         LimitMetricsPattern.compose(set); // Limit Metrics Pattern
         MeasuringRangePattern.compose(set); // Measuring Range Pattern
-        PopulationReferenceRangePatternV2.compose(set); // Population Reference Range Pattern
+        PopulationReferenceRangePattern.compose(set); // Population Reference Range Pattern
         PredicateDevicePattern.compose(set); // Predicate Device Pattern
         ReferenceLimitPattern.compose(set); // Reference Limit Pattern
         RegulatoryClassificationPattern.compose(set); // Regulatory Classification Pattern
-        TestPerformedPatternV2.compose(set); // Test Performed Pattern
+        TestPerformedPattern.compose(set); // Test Performed Pattern
     }
 }

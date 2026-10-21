@@ -116,9 +116,9 @@ public final class DexTerm {
     public static final EntityProxy.Concept LOINC_RECORD =
             EntityProxy.Concept.make("LOINC Record", PublicIds.of(UUID.fromString("06069ac5-71b4-4803-97c3-e58699fda62c")));
 
-    /** {@code Population Reference Range Pattern} — a DeX pattern. */
-    public static final EntityProxy.Pattern POPULATION_REFERENCE_RANGE_PATTERN =
-            EntityProxy.Pattern.make("Population Reference Range Pattern", PublicIds.of(UUID.fromString("e90e9d7a-0d75-40ea-b259-6b9b0d1b9b23")));
+    /** {@code Population Reference Range Pattern Archive} — a DeX v1 pattern, superseded by the v2 pattern of the same name. */
+    public static final EntityProxy.Pattern POPULATION_REFERENCE_RANGE_PATTERN_ARCHIVE =
+            EntityProxy.Pattern.make("Population Reference Range Pattern Archive", PublicIds.of(UUID.fromString("e90e9d7a-0d75-40ea-b259-6b9b0d1b9b23")));
 
     /** {@code Quantitative Allowed Result Range Pattern} — a DeX pattern. */
     public static final EntityProxy.Pattern QUANTITATIVE_ALLOWED_RESULT_RANGE_PATTERN =
@@ -148,9 +148,9 @@ public final class DexTerm {
     public static final EntityProxy.Concept TEST_PERFORMED =
             EntityProxy.Concept.make("Test Performed", PublicIds.of(UUID.fromString("542ce1f0-68bf-4a9b-bd7b-9d585a69206b")));
 
-    /** {@code Test Performed Pattern} — a DeX pattern. */
-    public static final EntityProxy.Pattern TEST_PERFORMED_PATTERN =
-            EntityProxy.Pattern.make("Test Performed Pattern", PublicIds.of(UUID.fromString("4289dbff-1557-4a1d-873a-7092b328615d")));
+    /** {@code Test Performed Pattern Archive} — a DeX v1 pattern, superseded by the v2 pattern of the same name. */
+    public static final EntityProxy.Pattern TEST_PERFORMED_PATTERN_ARCHIVE =
+            EntityProxy.Pattern.make("Test Performed Pattern Archive", PublicIds.of(UUID.fromString("4289dbff-1557-4a1d-873a-7092b328615d")));
 
     /** {@code Acceptable (SOLOR)} — a description's acceptability in a dialect. */
     public static final EntityProxy.Concept ACCEPTABLE =
@@ -295,8 +295,8 @@ public final class DexTerm {
             EntityProxy.Concept.make("Performance Metric Value", PublicIds.of(UUID.fromString("88bb710a-672a-4f02-ba7a-bbfb98e0a209")));
 
     /** {@code Population Reference Range Pattern} — a DeX v2 pattern. */
-    public static final EntityProxy.Pattern POPULATION_REFERENCE_RANGE_PATTERN_V2 =
-            EntityProxy.Pattern.make("Population Reference Range Pattern DeX v2", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2")));
+    public static final EntityProxy.Pattern POPULATION_REFERENCE_RANGE_PATTERN =
+            EntityProxy.Pattern.make("Population Reference Range Pattern", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2")));
 
     /** {@code Predicate Device} — a DeX v2 concept. */
     public static final EntityProxy.Concept PREDICATE_DEVICE =
@@ -363,8 +363,8 @@ public final class DexTerm {
             EntityProxy.Concept.make("Specificity", PublicIds.of(UUID.fromString("8990ee0d-14db-4b86-94fd-67f94478353b")));
 
     /** {@code Test Performed Pattern} — a DeX v2 pattern. */
-    public static final EntityProxy.Pattern TEST_PERFORMED_PATTERN_V2 =
-            EntityProxy.Pattern.make("Test Performed Pattern DeX v2", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751")));
+    public static final EntityProxy.Pattern TEST_PERFORMED_PATTERN =
+            EntityProxy.Pattern.make("Test Performed Pattern", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751")));
 
     /** {@code Upper Reference Limit} — a DeX v2 concept. */
     public static final EntityProxy.Concept UPPER_REFERENCE_LIMIT =
@@ -458,16 +458,16 @@ public final class DexTerm {
                 DEVICE_COMPANY_PATTERN,
                 DEVICE_EXTENSION_MEMBERSHIP_PATTERN,
                 INDICATION_FOR_USE_PATTERN,
-                POPULATION_REFERENCE_RANGE_PATTERN,
+                POPULATION_REFERENCE_RANGE_PATTERN_ARCHIVE,
                 QUANTITATIVE_ALLOWED_RESULT_RANGE_PATTERN,
-                TEST_PERFORMED_PATTERN,
+                TEST_PERFORMED_PATTERN_ARCHIVE,
                 DEVICE_PERFORMANCE_PATTERN,
                 LIMIT_METRICS_PATTERN,
                 MEASURING_RANGE_PATTERN,
-                POPULATION_REFERENCE_RANGE_PATTERN_V2,
+                POPULATION_REFERENCE_RANGE_PATTERN,
                 PREDICATE_DEVICE_PATTERN,
                 REFERENCE_LIMIT_PATTERN,
                 REGULATORY_CLASSIFICATION_PATTERN,
-                TEST_PERFORMED_PATTERN_V2);
+                TEST_PERFORMED_PATTERN);
     }
 }

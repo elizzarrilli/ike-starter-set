@@ -23,7 +23,7 @@ import dev.ikm.tinkar.terms.KernelPattern;
 
 import java.util.UUID;
 
-/** The "Population Reference Range Pattern" pattern of the Device Extension (DeX) starter set. */
+/** The "Population Reference Range Pattern" pattern of the Device Extension (DeX) starter set (v2). */
 final class PopulationReferenceRangePattern {
 
     private PopulationReferenceRangePattern() {
@@ -37,17 +37,17 @@ final class PopulationReferenceRangePattern {
     static void compose(KnowledgeSet set) {
         ActiveStamp inception = network.ike.foundation.ike.terms.Ike.DEX_INCEPTION;
 
-        set.pattern("Population Reference Range Pattern", PublicIds.of(UUID.fromString("e90e9d7a-0d75-40ea-b259-6b9b0d1b9b23"))).at(inception)
+        set.pattern("Population Reference Range Pattern", PublicIds.of(UUID.fromString("45860900-cd72-421c-80d8-7fafeeaf98b2"))).at(inception)
                 .meaning(DexTerm.REFERENCE_RANGE).purpose(DexTerm.DEVICE_EXTENSION_RECORD)
                 .field(DexTerm.REFERENCE_RANGE_POPULATION, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.STRING)
-                .field(DexTerm.MAXIMUM_VALUE_OPERATOR, KernelConcept.CONCRETE_DOMAIN_OPERATOR, KernelConcept.COMPONENT_FIELD)
-                .field(DexTerm.MINIMUM_VALUE_OPERATOR, KernelConcept.CONCRETE_DOMAIN_OPERATOR, KernelConcept.COMPONENT_FIELD)
-                .field(DexTerm.REFERENCE_RANGE_MAXIMUM, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.FLOAT_FIELD)
                 .field(DexTerm.REFERENCE_RANGE_MINIMUM, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.FLOAT_FIELD)
-                .field(DexTerm.EXAMPLE_UCUM_UNITS, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.STRING)
-                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("33d8d20a-d16e-4e3f-9873-9e5913361518")), KernelConcept.ENGLISH_LANGUAGE, "Population Reference Range Pattern", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
-                .semantic(DexTerm.DEVICE_EXTENSION_MEMBERSHIP_PATTERN, PublicIds.of(UUID.fromString("fe8aa63e-4594-40b5-806f-4e430dec64b1")))
-                .semanticOn(PublicIds.of(UUID.fromString("33d8d20a-d16e-4e3f-9873-9e5913361518")), KernelPattern.US_DIALECT_PATTERN, PublicIds.of(UUID.fromString("16732333-1612-40f8-aced-53f29633e192")), DexTerm.ACCEPTABLE)
+                .field(DexTerm.REFERENCE_RANGE_MAXIMUM, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.FLOAT_FIELD)
+                .field(DexTerm.MINIMUM_VALUE_OPERATOR, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_FIELD)
+                .field(DexTerm.MAXIMUM_VALUE_OPERATOR, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_FIELD)
+                .field(DexTerm.EXAMPLE_UCUM_UNITS, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_FIELD)
+                .field(DexTerm.INTERPRETATION, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
+                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("2443936a-b737-444b-ab09-f9e9cf9fb642")), KernelConcept.ENGLISH_LANGUAGE, "Population Reference Range Pattern", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
+                .semantic(DexTerm.DEVICE_EXTENSION_MEMBERSHIP_PATTERN, PublicIds.of(UUID.fromString("0512f924-7965-4295-a748-26e9c0982c5f")))
                 ;
     }
 }

@@ -23,7 +23,7 @@ import dev.ikm.tinkar.terms.KernelPattern;
 
 import java.util.UUID;
 
-/** The "Test Performed Pattern" pattern of the Device Extension (DeX) starter set. */
+/** The "Test Performed Pattern" pattern of the Device Extension (DeX) starter set (v2). */
 final class TestPerformedPattern {
 
     private TestPerformedPattern() {
@@ -37,18 +37,16 @@ final class TestPerformedPattern {
     static void compose(KnowledgeSet set) {
         ActiveStamp inception = network.ike.foundation.ike.terms.Ike.DEX_INCEPTION;
 
-        set.pattern("Test Performed Pattern", PublicIds.of(UUID.fromString("4289dbff-1557-4a1d-873a-7092b328615d"))).at(inception)
+        set.pattern("Test Performed Pattern", PublicIds.of(UUID.fromString("91d3829e-5a01-47f1-8178-9e224843d751"))).at(inception)
                 .meaning(DexTerm.TEST_PERFORMED).purpose(DexTerm.DEVICE_EXTENSION_RECORD)
                 .field(DexTerm.ANALYTE, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
                 .field(DexTerm.TARGET, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
-                .field(DexTerm.TEST_PERFORMED, DexTerm.LOINC_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
+                .field(DexTerm.TEST_PERFORMED, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
                 .field(DexTerm.INSTRUMENT, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
-                .field(DexTerm.SPECIMEN, DexTerm.SNOMED_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
-                .field(DexTerm.DETECTION_LIMIT, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.FLOAT_FIELD)
-                .field(DexTerm.EXAMPLE_UCUM_UNITS, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.STRING)
-                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("aa81821c-5063-4511-8866-73f00a0bf6b0")), KernelConcept.ENGLISH_LANGUAGE, "Test Performed Pattern", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
-                .semantic(DexTerm.DEVICE_EXTENSION_MEMBERSHIP_PATTERN, PublicIds.of(UUID.fromString("4bdfeef0-c73d-48c2-ba60-2ab6d5e708fb")))
-                .semanticOn(PublicIds.of(UUID.fromString("aa81821c-5063-4511-8866-73f00a0bf6b0")), KernelPattern.US_DIALECT_PATTERN, PublicIds.of(UUID.fromString("9b942b9f-edd7-4fd4-b8c1-a07d914b3871")), DexTerm.ACCEPTABLE)
+                .field(DexTerm.SPECIMEN, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
+                .field(DexTerm.EXAMPLE_UCUM_UNITS, DexTerm.DEVICE_EXTENSION_RECORD, KernelConcept.COMPONENT_ID_SET_FIELD)
+                .semantic(KernelPattern.DESCRIPTION_PATTERN, PublicIds.of(UUID.fromString("fc8d4642-4ebe-40b0-a23e-c0475f5a3263")), KernelConcept.ENGLISH_LANGUAGE, "Test Performed Pattern", KernelConcept.DESCRIPTION_NOT_CASE_SENSITIVE, KernelConcept.FULLY_QUALIFIED_NAME_DESCRIPTION_TYPE)
+                .semantic(DexTerm.DEVICE_EXTENSION_MEMBERSHIP_PATTERN, PublicIds.of(UUID.fromString("c7ef0843-1e26-4d01-8868-f547d16e35b5")))
                 ;
     }
 }
