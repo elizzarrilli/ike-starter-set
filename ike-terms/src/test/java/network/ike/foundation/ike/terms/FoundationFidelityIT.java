@@ -207,7 +207,17 @@ class FoundationFidelityIT {
      * pattern, Model instructions); Action record, Action input and Performed action; Action result, Action outcome and its three
      * outcomes, Written version, Outcome message; Komet action and its four children by what an
      * action does; and Activate component and Inactivate component. Editing a document block
-     * (IKE-Network/ike-issues#1306) adds 2: Edit document block and Replacement text.
+     * (IKE-Network/ike-issues#1306) adds 2: Edit document block and Replacement text; editing a sentence
+     * (IKE-Network/ike-issues#1313) adds 1, Edit document sentence. Adding and
+     * editing an ANF statement (IKE-Network/ike-issues#1312) adds 2: Add ANF statement and Edit ANF
+     * statement, whose input field reuses the ANF statement set's ANF statement tree.
+     * Promoting a topic to a complex concept (IKE-Network/ike-issues#1312) adds 2: Promote to
+     * complex concept and Complex concept name. Adding and deleting a document block
+     * (IKE-Network/ike-issues#806, #1300) adds 3: Add document block, Delete document block and
+     * Block kind, the insertion input's field; and {@code AnnotationModelSet} adds Retraction, 1.
+     * Annotations of sentence fragments (the segments design's decision 9, revised 2026-10-31)
+     * add 2 to {@code AnnotationModelSet}: Not clinical, a kind, and Text range, the Annotation
+     * pattern's fifth field.
      * <p>
      * {@code SourceReleaseModelSet} (IKE-Network/ike-issues#1304) adds 15: Knowledge base
      * provenance model and its purpose; Source release and its seven fields (Release name,
@@ -226,8 +236,37 @@ class FoundationFidelityIT {
      * versioned, Components unchanged, Semantics retired); Assembly registration and Release
      * registrations; Export registration and its four fields (Export file, Export selection, Output
      * checksum, Components exported).
+     * <p>
+     * {@code AnfStatementSet} (IKE-Network/ike-issues#1312) adds 63: ANF statement model; ANF
+     * statement and ANF statement element; the context and its six envelope attributes; timing and
+     * purpose; the twelve performance attributes; the ten request attributes with the repetition
+     * clause and its five measures; the narrative text; the associated statement; ANF statement
+     * property and its thirteen keys; Statement association and its ten types; and the pattern's
+     * purpose and field, ANF statement structure and ANF statement tree. The circumstance kinds it
+     * reuses are {@code ElmNodeKindSet}'s and count there.
+     * <p>
+     * {@code ComplexConceptSet} (IKE-Network/ike-issues#1312) adds 27: Complex concept model;
+     * Complex concept specification and Complex concept element with its five vertex meanings;
+     * Complex concept property and its seven keys; Expansion conjunction type and its two values;
+     * Unsafe distribution handling and its three values; Expansion association and Precondition
+     * association; and the pattern's purpose and field, Complex concept structure and Complex
+     * concept tree.
+     * The Complex concepts module, where promoted topics are written, adds 1.
+     * <p>
+     * {@code DecisionTreeSet} (dev-decision-tree-blocks, under IKE-Network/ike-issues#806) adds 45, the Count cost measure since 2026-11-01:
+     * Decision tree model; Decision tree; Decision tree node and its five kinds; Decision measure
+     * and its four kinds; Decision tree property and its eight keys; Decision measure semantic and
+     * its three semantics; Valuation coordinate properties and its five dimensions; Basis kind and
+     * its three kinds; Derivation kind and its five kinds; and the pattern's purpose and field,
+     * Decision tree structure and Decision tree content.
+     * <p>
+     * {@code CalculatorSet} (dev-calculator-blocks, under IKE-Network/ike-issues#806) adds 30:
+     * Calculator model; Calculator; Calculator element and its twelve kinds; Calculator property
+     * and its six keys; When-missing policy and its three policies; the Natural logarithm and Cox
+     * survival derivation kinds under Derivation kind; and the pattern's purpose and field,
+     * Calculator structure and Calculator content.
      */
-    private static final long AUTHORED_CONTENT_CONCEPTS = 456 + 70 + 11 + 8 + 23 + 15 + 2 + 12 + 1 + 18;   // + Nothing, the bottom concept (ClassificationModelSet)
+    private static final long AUTHORED_CONTENT_CONCEPTS = 456 + 70 + 11 + 8 + 23 + 15 + 2 + 12 + 1 + 18 + 63 + 4 + 21 + 2 + 27 + 2 + 1 + 19 + 1 + 45 + 4 + 30 + 2;   // + Not clinical and Text range (decision 9 revised); + Add document block, Delete document block, Block kind and Retraction (#806, #1300); + Nothing, the bottom concept (ClassificationModelSet); + the ANF statement set (#1312); + InstanceDataSet (4) and DocumentVertexSet (21) (#1313); + Add ANF statement and Edit ANF statement (#1312); + ComplexConceptSet (#1312); + Promote to complex concept, Complex concept name, Complex concepts module (#1312); + DocumentSegmentSet (19) and Edit document sentence (1) (#1313); + DecisionTreeSet (45: 44 and the Count cost measure of 2026-11-01) (dev-decision-tree-blocks) + CalculatorSet (30) (dev-calculator-blocks)
     /**
      * New patterns {@code ConstraintPatternSet} (4, IKE-Network/ike-issues#880 as
      * refactored by IKE-Network/ike-issues#890 — the never-created Concept Field
@@ -252,7 +291,7 @@ class FoundationFidelityIT {
      * mark, and the FHIR, QDM, QUICK, QI-Core, and US Core dialect patterns); and {@code ElmNodeKindSet} 2
      * (#1116: the Model Class Bridge Pattern and the Model Element Reading Pattern).
      */
-    private static final long AUTHORED_CONTENT_PATTERNS = 36 + 12 + 1 + 3 + 2 + 1 + 1 + 1 + 3;   // + the Release, Assembly and Export registration patterns (#1304); + the Change transaction pattern (ChangeTrackingModelSet, #1308); + the Inferred equivalence pattern (ClassificationModelSet); + the Document block edit input pattern (#1306); + the Source release and Knowledge base composition patterns (SourceReleaseModelSet, #1304); + the Action definition, Component action input and Version change result patterns (dev-komet-actions); + the AsciiDoc document attributes, block and eight reference patterns, git source and affirmation (#468); + the adopted journal manifest pattern, the block pattern having moved to DocumentStructureSet (#844); the affirmation pattern became the Annotation pattern (#1300)
+    private static final long AUTHORED_CONTENT_PATTERNS = 36 + 12 + 1 + 3 + 2 + 1 + 1 + 1 + 3 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1;   // + the Document block insertion input pattern (#806, #1300); + the Complex concept promotion input pattern (#1312); + the Complex concept pattern (ComplexConceptSet, #1312); + the ANF statement tree input pattern (#1312); + the Document vertex pattern, a template (DocumentVertexSet, #1313); + the ANF statement pattern (AnfStatementSet, #1312); + the Release, Assembly and Export registration patterns (#1304); + the Change transaction pattern (ChangeTrackingModelSet, #1308); + the Inferred equivalence pattern (ClassificationModelSet); + the Document block edit input pattern (#1306); + the Source release and Knowledge base composition patterns (SourceReleaseModelSet, #1304); + the Action definition, Component action input and Version change result patterns (dev-komet-actions); + the AsciiDoc document attributes, block and eight reference patterns, git source and affirmation (#468); + the adopted journal manifest pattern, the block pattern having moved to DocumentStructureSet (#844); the affirmation pattern became the Annotation pattern (#1300); + the Decision tree pattern (DecisionTreeSet, dev-decision-tree-blocks); + the Calculator pattern (CalculatorSet, dev-calculator-blocks)
     /**
      * Concepts a catalog import mints, never authored by hand: {@code ElmNodeCatalogSet},
      * generated from HL7's ELM schemas at cqframework/clinical_quality_language v5.3.0 by
@@ -625,32 +664,11 @@ class FoundationFidelityIT {
     static void loadAndSnapshot() throws Exception {
         CachingService.clearAll();
         ServiceProperties.set(ServiceKeys.DATA_STORE_ROOT, Files.createTempDirectory("ike-fidelity").toFile());
-        PrimitiveData.selectControllerByName("Load Ephemeral Store");
+        PrimitiveData.selectControllerByName("Load Memory-Only 64-bit Store");
         PrimitiveData.start();
         File baseline = Path.of("target", "data", "tinkar-starter-data-unreasoned-pb.zip").toFile();
         new LoadEntitiesFromProtobufFile(baseline).compute();
 
-        for (Map.Entry<UUID, String> entry : DELIBERATELY_RENAMED_FQNS.entrySet()) {
-            DELIBERATELY_RENAMED_FQNS_BY_NID.put(PrimitiveData.nid(entry.getKey()), entry.getValue());
-        }
-        for (Map.Entry<UUID, UUID> entry : DELIBERATELY_REPARENTED_ISA.entrySet()) {
-            DELIBERATELY_REPARENTED_ISA_BY_NID.put(
-                    PrimitiveData.nid(entry.getKey()), PrimitiveData.nid(entry.getValue()));
-        }
-        for (UUID uuid : DELIBERATELY_PARENTLESS) {
-            DELIBERATELY_PARENTLESS_BY_NID.add(PrimitiveData.nid(uuid));
-        }
-        for (UUID uuid : DELIBERATELY_NOT_RESTATED) {
-            DELIBERATELY_NOT_RESTATED_BY_NID.add(PrimitiveData.nid(uuid));
-        }
-        for (Map.Entry<UUID, UUID> entry : DELIBERATELY_ROLE_BEARING_ISA.entrySet()) {
-            DELIBERATELY_ROLE_BEARING_ISA_BY_NID.put(
-                    PrimitiveData.nid(entry.getKey()), PrimitiveData.nid(entry.getValue()));
-        }
-        for (Map.Entry<UUID, UUID> entry : DELIBERATELY_PART_OF_WHOLE.entrySet()) {
-            DELIBERATELY_PART_OF_WHOLE_BY_NID.put(
-                    PrimitiveData.nid(entry.getKey()), PrimitiveData.nid(entry.getValue()));
-        }
         for (UUID uuid : DELIBERATELY_NOT_ADOPTED_SEMANTIC_UUIDS) {
             // expectSemantic doubles as a baseline-presence check: the seeds must come
             // from the upstream baseline, and only from there (IKE-Network/ike-issues#887).
@@ -694,6 +712,37 @@ class FoundationFidelityIT {
 
         // The real, compiled, committed source — not a temp-dir stand-in.
         new IkeSource().compose().write();
+
+        resolveDeliberateExceptions();
+    }
+
+    /**
+     * Turns the deliberate-exception registries, kept by UUID, into nids. It runs after the
+     * replay because some entries name concepts the set mints, which the baseline alone does
+     * not hold, and the store mints no nid for a UUID it has never seen.
+     */
+    private static void resolveDeliberateExceptions() {
+        for (Map.Entry<UUID, String> entry : DELIBERATELY_RENAMED_FQNS.entrySet()) {
+            DELIBERATELY_RENAMED_FQNS_BY_NID.put(PrimitiveData.nid(entry.getKey()), entry.getValue());
+        }
+        for (Map.Entry<UUID, UUID> entry : DELIBERATELY_REPARENTED_ISA.entrySet()) {
+            DELIBERATELY_REPARENTED_ISA_BY_NID.put(
+                    PrimitiveData.nid(entry.getKey()), PrimitiveData.nid(entry.getValue()));
+        }
+        for (UUID uuid : DELIBERATELY_PARENTLESS) {
+            DELIBERATELY_PARENTLESS_BY_NID.add(PrimitiveData.nid(uuid));
+        }
+        for (UUID uuid : DELIBERATELY_NOT_RESTATED) {
+            DELIBERATELY_NOT_RESTATED_BY_NID.add(PrimitiveData.nid(uuid));
+        }
+        for (Map.Entry<UUID, UUID> entry : DELIBERATELY_ROLE_BEARING_ISA.entrySet()) {
+            DELIBERATELY_ROLE_BEARING_ISA_BY_NID.put(
+                    PrimitiveData.nid(entry.getKey()), PrimitiveData.nid(entry.getValue()));
+        }
+        for (Map.Entry<UUID, UUID> entry : DELIBERATELY_PART_OF_WHOLE.entrySet()) {
+            DELIBERATELY_PART_OF_WHOLE_BY_NID.put(
+                    PrimitiveData.nid(entry.getKey()), PrimitiveData.nid(entry.getValue()));
+        }
     }
 
     @AfterAll

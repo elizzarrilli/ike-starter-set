@@ -30,8 +30,11 @@ import dev.ikm.tinkar.terms.KernelConcept;
  *
  * <p><b>The kind hierarchy.</b> {@code Annotation kind} is the root; {@code Uncategorized
  * comment} is the default, and how Comment pattern semantics read; {@code Judgment} is a stance
- * on the content, with {@code Affirmation} and {@code Refutation} beneath it. A new kind is a
- * new concept here: no trailer grammar or walker changes.
+ * on the content, with {@code Affirmation} and {@code Refutation} beneath it; {@code Retraction}
+ * withdraws an earlier annotation and is no stance; {@code Not clinical} says the text carries no
+ * clinical fact. A new kind is a new concept here: no trailer grammar or walker changes, since a
+ * trailer may name any concept and the walker passes a kind it gives no behaviour on by its
+ * concept (the segments design's decision 9, revised 2026-10-31).
  *
  * <p><b>The fully qualified names are frozen.</b> Every concept takes the set's derived identity,
  * {@code T5(d890e06f…, "<name> (IkeFoundation)")}, and git commit messages carry the kind
@@ -43,8 +46,10 @@ import dev.ikm.tinkar.terms.KernelConcept;
  * concept, a description, any semantic, another annotation (a reply), a document, or a STAMP
  * (a whole change set). The fields name one exact version and what the annotator says of it:
  * the kind, the STAMP of the version the annotator saw, the elements within the referenced
- * component the annotation covers (a document's lines; empty for the whole component), and the
- * text. The annotation's own STAMP records who and when.
+ * component the annotation covers (a document's lines and sentences; empty for the whole
+ * component), the text, and the text range of each element: the columns of the part of a
+ * sentence it covers, so an annotation may cover words with gaps between them and share a word
+ * with another. The annotation's own STAMP records who and when.
  */
 final class AnnotationModelSet {
 
@@ -95,6 +100,17 @@ final class AnnotationModelSet {
                 "The annotator has reviewed the version and disputes it, with the reason as the"
                         + " annotation text. A refutation is an opinion, not a retirement: inactivating"
                         + " the content is a separate edit by whoever is accountable for it.");
+        concept(set, inception, "Retraction", "Annotation kind",
+                "The annotator withdraws an earlier annotation of theirs: in git, an Annotation: trailer"
+                        + " naming the annotation commit, which takes every annotation that commit recorded"
+                        + " out of force, with the reason as the text. Not a judgment: it takes back nothing"
+                        + " but its target, so a stance the target had superseded does not come back, and"
+                        + " later annotations stand. In the graph the retracted annotation gets an inactive"
+                        + " version under the retraction's STAMP.");
+        concept(set, inception, "Not clinical", "Annotation kind",
+                "The annotated text records no clinical fact, such as who came with the patient or"
+                        + " why the visit was booked: a narrative lift isolates no clinical element from it."
+                        + " Not a judgment: such annotations accumulate as comments do.");
 
         // ── The pattern's purpose and fields ─────────────────────────────────
         concept(set, inception, "Reviewed provenance", "Annotation model",
@@ -107,7 +123,14 @@ final class AnnotationModelSet {
                         + " latest is about a superseded version.");
         concept(set, inception, "Annotated elements", "Annotation model",
                 "The elements within the referenced component an annotation covers, in order —"
-                        + " a document's lines — or none, for the whole component.");
+                        + " a document's lines and sentences — or none, for the whole component. A sentence"
+                        + " an annotation covers in two places appears twice.");
+        concept(set, inception, "Text range", "Annotation model",
+                "For each annotated element, in order, the part of its text the annotation covers:"
+                        + " start-end, columns of the sentence's whitespace-normalized text, 0-based, the end"
+                        + " exclusive, or * for the whole element. Entries are separated by spaces; the field is"
+                        + " empty when every element is covered whole, and absent from annotations written"
+                        + " before it existed.");
         set.concept(fqn("Review module")).at(inception)
                 .synonym("Review module")
                 .definition("The module annotations made in a knowledge base are written to, so a"
@@ -123,10 +146,12 @@ final class AnnotationModelSet {
                 .field(set.conceptRef(fqn("Reviewed version")), purpose, KernelConcept.COMPONENT_FIELD)
                 .field(set.conceptRef(fqn("Annotated elements")), purpose, KernelConcept.COMPONENT_ID_LIST_FIELD)
                 .field(COMMENT_SOLOR, purpose, KernelConcept.STRING)
+                .field(set.conceptRef(fqn("Text range")), purpose, KernelConcept.STRING)
                 .synonym("Annotation pattern")
                 .definition("An annotation of the referenced component: its kind, the reviewed"
                         + " version's STAMP, the elements it covers (empty for the whole component),"
-                        + " and its text (empty when there is none).");
+                        + " its text (empty when there is none), and the part of each element's text it"
+                        + " covers (empty when it covers each whole).");
     }
 
     static String fqn(String name) {

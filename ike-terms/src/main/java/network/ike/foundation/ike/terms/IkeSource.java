@@ -181,6 +181,37 @@ public final class IkeSource implements KnowledgeSetSource {
         // elements are its children, so it composes first.
         DocumentStructureSet.compose(Ike.SET);
         AsciiDocModelSet.compose(Ike.SET);
+        // DocumentVertexSet declares a document as semantic vertices (IKE-Network/ike-issues#1313):
+        // the line meanings, the vertex property keys, the vertex data type and the template
+        // pattern. Its block meanings are the elements the two sets above declare, so it composes
+        // after both.
+        DocumentVertexSet.compose(Ike.SET);
+        // DocumentSegmentSet declares the text below the line as vertices (IKE-Network/ike-issues#1313):
+        // sentences, inline elements and the keys they carry. It reuses the vertex property parent
+        // and the inline references declared above, so it composes after them.
+        DocumentSegmentSet.compose(Ike.SET);
+        // InstanceDataSet declares the module parents that decide a pattern's kind, knowledge,
+        // ephemeral or instance (IKE-Network/ike-issues#1313), and the document modules under them.
+        InstanceDataSet.compose(Ike.SET);
+        // AnfStatementSet declares an ANF statement as one tree in an ANF statement pattern
+        // (IKE-Network/ike-issues#1312); its circumstance vertices reuse the circumstance
+        // kinds ElmNodeKindSet declares, so it composes after that set.
+        AnfStatementSet.compose(Ike.SET);
+        // ComplexConceptSet declares a complex concept's specification as one tree in a complex
+        // concept pattern (IKE-Network/ike-issues#1312); its prerequisites hold ANF statements by
+        // value, so it composes after AnfStatementSet.
+        ComplexConceptSet.compose(Ike.SET);
+        // DecisionTreeSet declares a decision tree as one tree in a decision tree pattern
+        // (dev-decision-tree-blocks, under IKE-Network/ike-issues#806): the node and measure
+        // kinds, the property keys, the measure semantics, the frames and the basis kinds. Its
+        // alternatives and events reference ANF statements, so it composes after AnfStatementSet.
+        DecisionTreeSet.compose(Ike.SET);
+        // CalculatorSet declares a medical calculator as one tree in a calculator pattern
+        // (dev-calculator-blocks, under IKE-Network/ike-issues#806): the vertex kinds, the
+        // property keys, the when-missing policies and two more derivation kinds. Its terms
+        // and formula reuse DecisionTreeSet's derivation keys and its Derivation kind parent,
+        // so it composes after that set.
+        CalculatorSet.compose(Ike.SET);
         KernelBindings.compose(Ike.SET);
         KometBindings.compose(Ike.SET);
         return Ike.SET;
