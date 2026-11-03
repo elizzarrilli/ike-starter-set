@@ -131,6 +131,13 @@ public final class DexSet {
         PrescriptionRequired.compose(set); // Prescription Required
         WaivedTest.compose(set); // Waived Test
 
+        // XpertXpress SARS-CoV-2 Plus change set (2026-10-29): labeler, analyte and targets, parents-first.
+        CEPHEID.compose(set); // CEPHEID
+        SARSCoV2.compose(set); // SARS-CoV-2
+        SARSCoV2NucleocapsidProteinNGene.compose(set); // SARS-CoV-2 Nucleocapsid protein (N) gene
+        SARSCoV2EnvelopeProteinEGene.compose(set); // SARS-CoV-2 Envelope protein (E) gene
+        SARSCoV2RNADependentRNAPolymeraseProteinRdRPGene.compose(set); // SARS-CoV-2 RNA-dependent RNA polymerase protein (RdRP) gene
+
         DevicePerformancePattern.compose(set); // Device Performance Pattern
         LimitMetricsPattern.compose(set); // Limit Metrics Pattern
         MeasuringRangePattern.compose(set); // Measuring Range Pattern

@@ -374,8 +374,28 @@ public final class DexTerm {
     public static final EntityProxy.Concept WAIVED_TEST =
             EntityProxy.Concept.make("Waived Test", PublicIds.of(UUID.fromString("b10b443c-1848-4c4b-9016-60e9bbc7a1c4")));
 
+    /** {@code CEPHEID} — a DeX concept added by the XpertXpress SARS-CoV-2 Plus change set. */
+    public static final EntityProxy.Concept CEPHEID =
+            EntityProxy.Concept.make("CEPHEID", PublicIds.of(UUID.fromString("aee1046f-8585-44d1-a42f-114635c78359")));
+
+    /** {@code SARS-CoV-2} — a DeX concept added by the XpertXpress SARS-CoV-2 Plus change set. */
+    public static final EntityProxy.Concept SARS_COV_2 =
+            EntityProxy.Concept.make("SARS-CoV-2", PublicIds.of(UUID.fromString("d1ad2287-dda1-47b3-b167-37dbbb973b58")));
+
+    /** {@code SARS-CoV-2 Nucleocapsid protein (N) gene} — a DeX concept added by the XpertXpress SARS-CoV-2 Plus change set. */
+    public static final EntityProxy.Concept SARS_COV_2_NUCLEOCAPSID_PROTEIN_N_GENE =
+            EntityProxy.Concept.make("SARS-CoV-2 Nucleocapsid protein (N) gene", PublicIds.of(UUID.fromString("fd4bd781-e0d1-4e25-823a-72e52d57ddae")));
+
+    /** {@code SARS-CoV-2 Envelope protein (E) gene} — a DeX concept added by the XpertXpress SARS-CoV-2 Plus change set. */
+    public static final EntityProxy.Concept SARS_COV_2_ENVELOPE_PROTEIN_E_GENE =
+            EntityProxy.Concept.make("SARS-CoV-2 Envelope protein (E) gene", PublicIds.of(UUID.fromString("6e7e9cb4-9b92-4834-a7b0-7bfab48c892f")));
+
+    /** {@code SARS-CoV-2 RNA-dependent RNA polymerase protein (RdRP) gene} — a DeX concept added by the XpertXpress SARS-CoV-2 Plus change set. */
+    public static final EntityProxy.Concept SARS_COV_2_RNA_DEPENDENT_RNA_POLYMERASE_PROTEIN_RDRP_GENE =
+            EntityProxy.Concept.make("SARS-CoV-2 RNA-dependent RNA polymerase protein (RdRP) gene", PublicIds.of(UUID.fromString("ec968409-250f-4249-80ba-616344a38bd4")));
+
     /**
-     * The concepts this set declares, the DeX concepts of v1 and v2, as opposed to the established
+     * The concepts this set declares, the DeX concepts of v1 and v2 and of the XpertXpress change set, as opposed to the established
      * components it only cites. The fidelity test uses it to exempt them from the meaning-and-purpose
      * definition rule until their definitions are authored.
      *
@@ -440,7 +460,12 @@ public final class DexTerm {
                 SENSITIVITY_METRIC_VALUE,
                 SPECIFICITY,
                 UPPER_REFERENCE_LIMIT,
-                WAIVED_TEST);
+                WAIVED_TEST,
+                CEPHEID,
+                SARS_COV_2,
+                SARS_COV_2_NUCLEOCAPSID_PROTEIN_N_GENE,
+                SARS_COV_2_ENVELOPE_PROTEIN_E_GENE,
+                SARS_COV_2_RNA_DEPENDENT_RNA_POLYMERASE_PROTEIN_RDRP_GENE);
     }
 
     /**
