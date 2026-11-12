@@ -138,6 +138,22 @@ public final class DexSet {
         SARSCoV2EnvelopeProteinEGene.compose(set); // SARS-CoV-2 Envelope protein (E) gene
         SARSCoV2RNADependentRNAPolymeraseProteinRdRPGene.compose(set); // SARS-CoV-2 RNA-dependent RNA polymerase protein (RdRP) gene
 
+        // XpertXpress respiratory panel change set (2026-11-12): analytes, targets and example UCUM units, parents-first.
+        InfluenzaAAnalyte.compose(set); // Influenza A (Analyte)
+        InfluenzaBAnalyte.compose(set); // Influenza B (Analyte)
+        RespiratorySyncytialVirusAnalyte.compose(set); // Respiratory Syncytial Virus (Analyte)
+        RespiratorySyncytialVirusSubgroupBAnalyte.compose(set); // Respiratory Syncytial Virus Subgroup B (Analyte)
+        InfluenzaAMatrixProteinMGeneTarget.compose(set); // Influenza A Matrix protein (M) gene (Target)
+        InfluenzaABasicPolymeraseProtein2PB2GeneTarget.compose(set); // Influenza A basic polymerase protein 2 (PB2) gene (Target)
+        InfluenzaAPolymeraseAcidicProteinPAGeneTarget.compose(set); // Influenza A polymerase acidic protein (PA) gene (Target)
+        InfluenzaBMatrixProteinMGeneTarget.compose(set); // Influenza B Matrix protein (M) gene (Target)
+        InfluenzaBNonStructuralProteinNSGeneTarget.compose(set); // Influenza B non-structural protein (NS) gene (Target)
+        RSVANucleocapsidProteinNGeneTarget.compose(set); // RSV A Nucleocapsid protein (N) gene (Target)
+        RSVBNucleocapsidProteinNGeneTarget.compose(set); // RSV B Nucleocapsid protein (N) gene (Target)
+        ChickenEmbryoInfectiousDosePerMilliliter.compose(set); // 50% chicken embryo infectious dose per milliliter {CEID50}/mL
+        TissueCultureInfectiousDosePerMilliliter.compose(set); // 50% tissue culture infectious dose per milliliter {TCID_50}/mL
+        FocusFormingUnitsPerMilliliter.compose(set); // focus-forming units per milliliter (FFU/mL)
+
         DevicePerformancePattern.compose(set); // Device Performance Pattern
         LimitMetricsPattern.compose(set); // Limit Metrics Pattern
         MeasuringRangePattern.compose(set); // Measuring Range Pattern

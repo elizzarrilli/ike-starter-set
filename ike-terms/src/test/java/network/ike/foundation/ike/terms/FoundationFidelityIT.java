@@ -320,9 +320,10 @@ class FoundationFidelityIT {
      * families, and the 16 concepts filed under them (the six Interval/Temporal concepts the v1 data
      * also carries are already in the foundation) = 21. v2 (2026-10-13): the 35 DeX-module concepts
      * and the 2 overlay-module Prescription Status values = 37. XpertXpress SARS-CoV-2 Plus change set
-     * (2026-10-29): one Device Labeler (CEPHEID), one Analyte and three Targets = 5.
+     * (2026-10-29): one Device Labeler (CEPHEID), one Analyte and three Targets = 5. XpertXpress respiratory
+     * panel change set (2026-11-12): four Analytes, seven Targets and three example UCUM units = 14.
      */
-    private static final long DEX_CONCEPTS = 21 + 37 + 5;
+    private static final long DEX_CONCEPTS = 21 + 37 + 5 + 14;
     /**
      * Patterns the DeX starter data adds: v1's DeX membership pattern and its eight record patterns
      * (9), and v2's eight DeX patterns (8), two of which share a name with a v1 pattern.

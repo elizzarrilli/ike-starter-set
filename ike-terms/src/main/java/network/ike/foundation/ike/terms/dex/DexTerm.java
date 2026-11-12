@@ -394,8 +394,64 @@ public final class DexTerm {
     public static final EntityProxy.Concept SARS_COV_2_RNA_DEPENDENT_RNA_POLYMERASE_PROTEIN_RDRP_GENE =
             EntityProxy.Concept.make("SARS-CoV-2 RNA-dependent RNA polymerase protein (RdRP) gene", PublicIds.of(UUID.fromString("ec968409-250f-4249-80ba-616344a38bd4")));
 
+    /** {@code Influenza A (Analyte)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept INFLUENZA_A_ANALYTE =
+            EntityProxy.Concept.make("Influenza A (Analyte)", PublicIds.of(UUID.fromString("15b096b6-df9a-4570-b0cd-a73ab4a17e62")));
+
+    /** {@code Influenza B (Analyte)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept INFLUENZA_B_ANALYTE =
+            EntityProxy.Concept.make("Influenza B (Analyte)", PublicIds.of(UUID.fromString("73472010-f7b2-4f4b-a01c-3f047ba50643")));
+
+    /** {@code Respiratory Syncytial Virus (Analyte)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept RESPIRATORY_SYNCYTIAL_VIRUS_ANALYTE =
+            EntityProxy.Concept.make("Respiratory Syncytial Virus (Analyte)", PublicIds.of(UUID.fromString("425012c4-1cf7-46b9-b110-52cc95add98b")));
+
+    /** {@code Respiratory Syncytial Virus Subgroup B (Analyte)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept RESPIRATORY_SYNCYTIAL_VIRUS_SUBGROUP_B_ANALYTE =
+            EntityProxy.Concept.make("Respiratory Syncytial Virus Subgroup B (Analyte)", PublicIds.of(UUID.fromString("d328160c-65b1-4f92-a79b-2e43735893a6")));
+
+    /** {@code Influenza A Matrix protein (M) gene (Target)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept INFLUENZA_A_MATRIX_PROTEIN_M_GENE_TARGET =
+            EntityProxy.Concept.make("Influenza A Matrix protein (M) gene (Target)", PublicIds.of(UUID.fromString("9e382794-2e39-415b-84e8-2eafe71c112a")));
+
+    /** {@code Influenza A basic polymerase protein 2 (PB2) gene (Target)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept INFLUENZA_A_BASIC_POLYMERASE_PROTEIN_2_PB2_GENE_TARGET =
+            EntityProxy.Concept.make("Influenza A basic polymerase protein 2 (PB2) gene (Target)", PublicIds.of(UUID.fromString("833ee639-cc97-4bc6-adaf-ecbbba72627a")));
+
+    /** {@code Influenza A polymerase acidic protein (PA) gene (Target)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept INFLUENZA_A_POLYMERASE_ACIDIC_PROTEIN_PA_GENE_TARGET =
+            EntityProxy.Concept.make("Influenza A polymerase acidic protein (PA) gene (Target)", PublicIds.of(UUID.fromString("6cbec6e5-37e3-4366-9e1c-f960ba9a3df0")));
+
+    /** {@code Influenza B Matrix protein (M) gene (Target)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept INFLUENZA_B_MATRIX_PROTEIN_M_GENE_TARGET =
+            EntityProxy.Concept.make("Influenza B Matrix protein (M) gene (Target)", PublicIds.of(UUID.fromString("d07f59ab-156e-4c8c-9ddb-b7953769dee3")));
+
+    /** {@code Influenza B non-structural protein (NS) gene (Target)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept INFLUENZA_B_NON_STRUCTURAL_PROTEIN_NS_GENE_TARGET =
+            EntityProxy.Concept.make("Influenza B non-structural protein (NS) gene (Target)", PublicIds.of(UUID.fromString("8b56dddf-4de1-4b9e-a271-daaf3780fc35")));
+
+    /** {@code RSV A Nucleocapsid protein (N) gene (Target)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept RSV_A_NUCLEOCAPSID_PROTEIN_N_GENE_TARGET =
+            EntityProxy.Concept.make("RSV A Nucleocapsid protein (N) gene (Target)", PublicIds.of(UUID.fromString("96e1b1c4-2272-4242-b870-740cb76c5ec8")));
+
+    /** {@code RSV B Nucleocapsid protein (N) gene (Target)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept RSV_B_NUCLEOCAPSID_PROTEIN_N_GENE_TARGET =
+            EntityProxy.Concept.make("RSV B Nucleocapsid protein (N) gene (Target)", PublicIds.of(UUID.fromString("79323126-50fc-4864-b566-7b3f4e2ded4a")));
+
+    /** {@code 50% chicken embryo infectious dose per milliliter {CEID50}/mL} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept CEID50_PER_MILLILITER =
+            EntityProxy.Concept.make("50% chicken embryo infectious dose per milliliter {CEID50}/mL", PublicIds.of(UUID.fromString("e28bb3c2-daa9-4143-992b-3a595d5981b9")));
+
+    /** {@code 50% tissue culture infectious dose per milliliter {TCID_50}/mL} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept TCID50_PER_MILLILITER =
+            EntityProxy.Concept.make("50% tissue culture infectious dose per milliliter {TCID_50}/mL", PublicIds.of(UUID.fromString("5791683c-78de-477f-98c9-aacffe491fb0")));
+
+    /** {@code focus-forming units per milliliter (FFU/mL)} — a DeX concept added by the XpertXpress respiratory panel change set. */
+    public static final EntityProxy.Concept FFU_PER_MILLILITER =
+            EntityProxy.Concept.make("focus-forming units per milliliter (FFU/mL)", PublicIds.of(UUID.fromString("0a5fdd75-5790-4b1c-93c4-e2a200b3defc")));
+
     /**
-     * The concepts this set declares, the DeX concepts of v1 and v2 and of the XpertXpress change set, as opposed to the established
+     * The concepts this set declares, the DeX concepts of v1 and v2 and of the XpertXpress change sets, as opposed to the established
      * components it only cites. The fidelity test uses it to exempt them from the meaning-and-purpose
      * definition rule until their definitions are authored.
      *
@@ -465,7 +521,21 @@ public final class DexTerm {
                 SARS_COV_2,
                 SARS_COV_2_NUCLEOCAPSID_PROTEIN_N_GENE,
                 SARS_COV_2_ENVELOPE_PROTEIN_E_GENE,
-                SARS_COV_2_RNA_DEPENDENT_RNA_POLYMERASE_PROTEIN_RDRP_GENE);
+                SARS_COV_2_RNA_DEPENDENT_RNA_POLYMERASE_PROTEIN_RDRP_GENE,
+                INFLUENZA_A_ANALYTE,
+                INFLUENZA_B_ANALYTE,
+                RESPIRATORY_SYNCYTIAL_VIRUS_ANALYTE,
+                RESPIRATORY_SYNCYTIAL_VIRUS_SUBGROUP_B_ANALYTE,
+                INFLUENZA_A_MATRIX_PROTEIN_M_GENE_TARGET,
+                INFLUENZA_A_BASIC_POLYMERASE_PROTEIN_2_PB2_GENE_TARGET,
+                INFLUENZA_A_POLYMERASE_ACIDIC_PROTEIN_PA_GENE_TARGET,
+                INFLUENZA_B_MATRIX_PROTEIN_M_GENE_TARGET,
+                INFLUENZA_B_NON_STRUCTURAL_PROTEIN_NS_GENE_TARGET,
+                RSV_A_NUCLEOCAPSID_PROTEIN_N_GENE_TARGET,
+                RSV_B_NUCLEOCAPSID_PROTEIN_N_GENE_TARGET,
+                CEID50_PER_MILLILITER,
+                TCID50_PER_MILLILITER,
+                FFU_PER_MILLILITER);
     }
 
     /**
