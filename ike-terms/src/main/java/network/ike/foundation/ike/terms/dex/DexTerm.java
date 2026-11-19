@@ -450,8 +450,20 @@ public final class DexTerm {
     public static final EntityProxy.Concept FFU_PER_MILLILITER =
             EntityProxy.Concept.make("focus-forming units per milliliter (FFU/mL)", PublicIds.of(UUID.fromString("0a5fdd75-5790-4b1c-93c4-e2a200b3defc")));
 
+    /** {@code ORTHO-CLINICAL DIAGNOSTICS, INC.} — a DeX concept added by the VITROS CREA change set. */
+    public static final EntityProxy.Concept ORTHO_CLINICAL_DIAGNOSTICS_INC =
+            EntityProxy.Concept.make("ORTHO-CLINICAL DIAGNOSTICS, INC.", PublicIds.of(UUID.fromString("725ba917-e9a2-4bdd-920a-ab95ebd3d411")));
+
+    /** {@code Creatinine (Analyte)} — a DeX concept added by the VITROS CREA change set. */
+    public static final EntityProxy.Concept CREATININE_ANALYTE =
+            EntityProxy.Concept.make("Creatinine (Analyte)", PublicIds.of(UUID.fromString("37899487-d8d0-44bb-ac40-9f4efe16cdb3")));
+
+    /** {@code Creatinine target} — a DeX concept added by the VITROS CREA change set (the data names it "Creatinine (Target)"). */
+    public static final EntityProxy.Concept CREATININE_TARGET =
+            EntityProxy.Concept.make("Creatinine target", PublicIds.of(UUID.fromString("bbe7285b-bfad-43fc-9315-0659c6c28905")));
+
     /**
-     * The concepts this set declares, the DeX concepts of v1 and v2 and of the XpertXpress change sets, as opposed to the established
+     * The concepts this set declares, the DeX concepts of v1 and v2 and of the XpertXpress and VITROS CREA change sets, as opposed to the established
      * components it only cites. The fidelity test uses it to exempt them from the meaning-and-purpose
      * definition rule until their definitions are authored.
      *
@@ -535,7 +547,10 @@ public final class DexTerm {
                 RSV_B_NUCLEOCAPSID_PROTEIN_N_GENE_TARGET,
                 CEID50_PER_MILLILITER,
                 TCID50_PER_MILLILITER,
-                FFU_PER_MILLILITER);
+                FFU_PER_MILLILITER,
+                ORTHO_CLINICAL_DIAGNOSTICS_INC,
+                CREATININE_ANALYTE,
+                CREATININE_TARGET);
     }
 
     /**

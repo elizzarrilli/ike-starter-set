@@ -154,6 +154,11 @@ public final class DexSet {
         TissueCultureInfectiousDosePerMilliliter.compose(set); // 50% tissue culture infectious dose per milliliter {TCID_50}/mL
         FocusFormingUnitsPerMilliliter.compose(set); // focus-forming units per milliliter (FFU/mL)
 
+        // VITROS CREA change set (2026-11-17): device labeler, analyte and target, parents-first.
+        OrthoClinicalDiagnosticsInc.compose(set); // ORTHO-CLINICAL DIAGNOSTICS, INC.
+        CreatinineAnalyte.compose(set); // Creatinine (Analyte)
+        CreatinineTarget.compose(set); // Creatinine target
+
         DevicePerformancePattern.compose(set); // Device Performance Pattern
         LimitMetricsPattern.compose(set); // Limit Metrics Pattern
         MeasuringRangePattern.compose(set); // Measuring Range Pattern
